@@ -1,17 +1,62 @@
 body {
   font-family: "Roboto", sans-serif;
+  min-height: 300vh;
+  margin: 0;
 }
 
-ul {
+.page-header {
+  position: fixed;
+  right: 0;
+  left: 0;
+
+  padding: 20px 10px;
+
+  border-bottom: 1px solid black;
+  box-shadow: 0px -3px 30px 0px rgba(0, 0, 0, 0.75);
+}
+
+.navigation-list {
   list-style: none;
+  padding: 0 0 0 1em;
+  font-size: 1.2em;
+
+  transition-property: display;
+  transition-delay: 1s;
+}
+.navigation-list:hover .link{
+  display: block;
 }
 
-li {
-  line-height: 2em;
-}
-
-li::before {
-  content: url("../icons/alert-circle.svg");
+.list-item {
   display: inline-block;
-  vertical-align: sub;
+}
+
+.list-item + .list-item {
+  margin-left: 1.5em;
+}
+
+.link {
+  display: none;
+
+  padding: 0.6em 2em;
+  border: 1px solid red;
+  text-decoration: none;
+  color: inherit;
+
+  transition-property: all;
+  transition-duration: 0.37s;
+  /* transition-timing-function: ; */
+  /* transition-delay: 1s; */
+}
+
+.link:hover,
+.link:focus {
+  outline: none;
+  background-color: red;
+  color: white;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+}
+
+.link:active {
+  box-shadow: inset 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
 }
