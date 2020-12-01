@@ -81,6 +81,6 @@ body {
   background-color: black;
 }
 
-.list-item:hover .link::after{
+.link:hover::after{
   width: 100%;
 }
