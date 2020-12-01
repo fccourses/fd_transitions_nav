@@ -1,13 +1,19 @@
-body{
+body {
   font-family: sans-serif;
 }
 
 p {
-  color: dodgerblue;
+  color: #fd4659;
   font-size: 2em;
 }
 
+p::first-line {
+  background-color: #4a0100;
+  font-style: italic;
+}
+
 p::first-letter {
+  text-decoration: underline black;
   font-size: 3em;
-  color: red;
+  color: dodgerblue;
 }
