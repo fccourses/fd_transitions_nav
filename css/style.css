@@ -1,16 +1,51 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 p {
   color: #fd4659;
   font-size: 2em;
   border: 2px solid black;
-  box-shadow: 6px 7px 26px -4px rgba(0,0,0,0.5);
+  box-shadow: 6px 7px 26px -4px rgba(0, 0, 0, 0.5);
 }
 
-p::selection {
-  background-color: green;
-  color: black;
-  text-shadow: -4px -2px 6px rgba(150, 150, 150, 0.71);
+p::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  color: white;
+  font-size: 2em;
+}
+
+ul{
+  list-style: none;
+}
+
+li{
+  text-align: center;
+  position: relative;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+li::before,
+li::after {
+  position: absolute;
+  display: block;
+  content: open-quote;
+  color: red;
+  font-size: 3em;
+}
+
+li::after{
+  content: close-quote;
+  left: 100%;
+  top: 10px;
+}
+
+li::before {
+  top: -10px;
+  right: 100%;
 }
