@@ -1,14 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   min-height: 300vh;
   margin: 0;
+  margin-top: 150px;
 }
 
 .page-header {
   position: fixed;
+  z-index: 10;
+  top: 0;
   right: 0;
   left: 0;
-
+  background-color: white;
   padding: 20px 10px;
 
   border-bottom: 1px solid black;
@@ -23,9 +30,6 @@ body {
   transition-property: display;
   transition-delay: 1s;
 }
-.navigation-list:hover .link{
-  display: block;
-}
 
 .list-item {
   display: inline-block;
@@ -36,27 +40,55 @@ body {
 }
 
 .link {
-  display: none;
-
   padding: 0.6em 2em;
   border: 1px solid red;
   text-decoration: none;
   color: inherit;
 
+  background-color: #f10036;
+
   transition-property: all;
-  transition-duration: 0.37s;
+  transition-duration: 0.5s;
   /* transition-timing-function: ; */
-  /* transition-delay: 1s; */
 }
 
 .link:hover,
 .link:focus {
   outline: none;
-  background-color: red;
+  background-color: #9cef00;
   color: white;
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
 }
 
 .link:active {
   box-shadow: inset 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+}
+
+.linear {
+  transition-property: width;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+
+  background-color: black;
+  height: 100px;
+  width: 12%;
+  color: white;
+  text-align: center;
+  font-size: 2em;
+}
+
+.contain:hover > .linear {
+  width: 100%;
+}
+
+.ease-in {
+  transition-timing-function: ease-in;
+}
+
+.ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+
+.ease {
+  transition-timing-function: ease;
 }
