@@ -2,50 +2,16 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-p {
-  color: #fd4659;
-  font-size: 2em;
-  border: 2px solid black;
-  box-shadow: 6px 7px 26px -4px rgba(0, 0, 0, 0.5);
-}
-
-p::before {
-  content: "";
-  display: block;
-  width: 50px;
-  height: 50px;
-  background-color: red;
-  color: white;
-  font-size: 2em;
-}
-
-ul{
+ul {
   list-style: none;
 }
 
-li{
-  text-align: center;
-  position: relative;
-  max-width: 600px;
-  margin-bottom: 20px;
-}
-
-li::before,
-li::after {
-  position: absolute;
-  display: block;
-  content: open-quote;
-  color: red;
-  font-size: 3em;
-}
-
-li::after{
-  content: close-quote;
-  left: 100%;
-  top: 10px;
+li {
+  line-height: 2em;
 }
 
 li::before {
-  top: -10px;
-  right: 100%;
+  content: url("../icons/alert-circle.svg");
+  display: inline-block;
+  vertical-align: sub;
 }
