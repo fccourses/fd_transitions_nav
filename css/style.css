@@ -40,6 +40,8 @@ body {
 }
 
 .link {
+  position: relative;
+
   padding: 0.6em 2em;
   border: 1px solid red;
   text-decoration: none;
@@ -48,8 +50,8 @@ body {
   background-color: #f10036;
 
   transition-property: all;
-  transition-duration: 0.5s;
-  /* transition-timing-function: ; */
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
 }
 
 .link:hover,
@@ -64,31 +66,21 @@ body {
   box-shadow: inset 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
 }
 
-.linear {
-  transition-property: width;
-  transition-duration: 1s;
-  transition-timing-function: linear;
+.link::after{
+  content: '';
+  position: absolute;
 
+  left: 0;
+  bottom: -1em;
+
+  width: 0;
+  height: 0.5em;
+
+  transition: width, ease-in-out, 0.3s;
+  
   background-color: black;
-  height: 100px;
-  width: 12%;
-  color: white;
-  text-align: center;
-  font-size: 2em;
 }
 
-.contain:hover > .linear {
+.list-item:hover .link::after{
   width: 100%;
-}
-
-.ease-in {
-  transition-timing-function: ease-in;
-}
-
-.ease-in-out {
-  transition-timing-function: ease-in-out;
-}
-
-.ease {
-  transition-timing-function: ease;
 }
